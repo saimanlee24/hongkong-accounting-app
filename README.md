@@ -1,21 +1,42 @@
-# Hong Kong Accounting App
+# Backend Setup & Testing Guide
 
-This project is a starter template for an accounting application focused on Hong Kong.
+This backend is built with Express.js, Sequelize, and SQLite3 for a payroll/accounting application.
 
-## Features
-- Backend API
-- Frontend Interface
+## 1. Install dependencies
 
-## Getting Started
+```bash
+npm install
+```
 
-### Prerequisites
-- Node.js
-- npm
+## 2. Run the server
 
-### Installation
-1. Clone the repo
-2. Install dependencies
-3. Start the application
+```bash
+npm start
+```
+The server will run at `http://localhost:3000`
 
-## License
-This project is licensed under the MIT License.
+## 3. Test API Endpoints
+
+### Get all payrolls
+```bash
+curl http://localhost:3000/api/payroll
+```
+
+### Add a payroll
+```bash
+curl -X POST http://localhost:3000/api/payroll \
+  -H "Content-Type: application/json" \
+  -d '{"employeeId":1,"month":"2025-08","basicSalary":5000,"allowances":200,"deductions":50,"netPay":5150}'
+```
+
+## 4. Database
+
+A SQLite database file (`database.sqlite`) will be created automatically in the project root.
+
+## 5. Customize
+
+- Add more models, controllers, and routes as needed.
+- For authentication, validation, etc., ask Copilot for code examples!
+
+---
+For any questions or to request more features, ask Copilot!
