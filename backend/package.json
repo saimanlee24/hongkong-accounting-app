@@ -1,0 +1,1 @@
+{"name":"hongkong-accounting-backend","version":"1.0.0","description":"Backend for Hong Kong Accounting App","main":"pp.js","scripts":{"start":"node pp.js"},"dependencies":{"express":"^4.18.2","sequelize":"^6.32.1","better-sqlite3":"^9.0.0"}}
